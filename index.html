@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>		<!-- 這是註解 -->
+﻿!DOCTYPE html>		<!-- 這是註解 -->
 <html>				<!-- 這是html開頭的tag -->
 <head>				<!-- 這是head開頭的tag -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<!-- 宣告編碼 -->
-<title>這是要教給大家的Javascript程式</title>							<!-- 放在視窗列的文字 -->
+<title>情話生成器</title>							<!-- 放在視窗列的文字 -->
 
     <!-- CSS Base -->
      <link rel="stylesheet" type='text/css' media='all' href="css/base.css"> 
@@ -10,42 +10,59 @@
      <link rel="stylesheet" type='text/css' media='all' href="css/colors.css"> 
     <!-- Optional - CSS SVG Icons (Font Awesome) -->
      <link rel="stylesheet" type='text/css' media='all' href="css/svg-icons.css"> 
-
+   
 
 </head>				<!-- 這是head結束的tag -->
 <body>
-    <main role="main">
+
+ <header>
+    <div class="row">
+      <h1 class="col-sm-8">情話</h1>
+      <nav class="col-sm-4">
+        <p>愛   信任   包容</p>
+     </nav>
+    </div>
+  </header>
+  
+   <main role="main">
         <article id="webslides" class="vertical">
-<section class="bg-black aligncenter">
-<!-- 下面是選項的語法 -->
+<section class="bg-red aligncenter">
+<!-- 下面是選項的語法 -->	
 <div class="wrap  fadeInUp" id="sec1">
 	<div class="content-left">
-		<input type="radio" name="option" value="跑步" checked>跑步<br>
-		<input type="radio" name="option" value="鐵軌">鐵軌<br>
-		<input type="radio" name="option" value="山巔">山巔<br>
+		
+		<input type="radio" name="option" value="給你的歌">給你的歌<br>
+  		<input type="radio" name="option" value="傾城之戀">傾城之戀<br>
+		<input type="radio" name="option" value="海誓">海誓<br>
 		<select name="test" class="opts" id="myselect">
-		  <option selected value=1>舒宇宸</option>
-		  <option value=2>劉之中</option>
-		  <option value=3>李昱勳</option>
+		<option selected value=1>席慕蓉</option>
+		<option  value=2>張愛玲</option>
+		<option  value=3>簡媜</option>
+		
 		</select>
-		名言一:<input id="quote_input1" value="數學建模教育之道無它, 唯數學與榜樣"> <br>
-		名言二:<input id="quote_input2" value="Mathematical Modeling is nothing, but Mathematics and Model!"> <br>
-		名言三:<input id="quote_input3" value="舒大ㄅ土, me"> <br>
-		<button type="button" id="mybutton" onclick=showopt()>產生名言</button>	<!-- 按了之後要執行showopt() -->
+		情話一:<input id="quote_input1" value="走得最急的都是最美的時光。"> <br>
+		情話二:<input id="quote_input2" value="生在這世上，沒有一樣感情不是千瘡百孔的。"> <br>
+		情話三:<input id="quote_input3" value="誓言用來拴騷動的心，終就拴住了虛空。"> <br>
+		<button type="button" id="mybutton" onclick=showopt()>確認</button>	<!-- 按了之後要執行showopt() -->
 	</div>
-</div>
+ </div>
+ 
 <div id="sec2">	
 	<span id="teacher" class="background-right-bottom" style="background-image:url('images/ycshu.png'); z-index:5;"></span>
 	<span id="bgimage" class="background light" style="background-image:url('images/road-dawn-mountains-sky.jpeg');"></span>
 	<div class="wrap  fadeInUp">
 		<div class="content-left">
 			<blockquote>
-				<h3 id="quote_line1">"數學建模教育之道無它<br>唯數學與榜樣"</h3>
-				<p id="author1"><cite>舒大ㄅ土</cite></p>
+				<h3 id="quote_line1"></h3>
+				<p id="author1"><cite></cite></p>
 			</blockquote>
 			<blockquote>
-				<h3 id="quote_line2">"Mathematical Modeling is nothing<br>but Mathematics and Model!"</h3>
-				<p id="author2"><cite>me</cite></p>				
+				<h3 id="quote_line2"></h3>
+				<p id="author2"><cite></cite></p>				
+			</blockquote>
+			<blockquote>
+				<h3 id="quote_line1"></h3>
+				<p id="author1"><cite></cite></p>
 			</blockquote>
 		</div>
 	</div>
@@ -102,11 +119,11 @@ function showopt() {
 	
 	var teacher_no = document.getElementById("myselect").value;
 	if(teacher_no == 1) {
-		document.getElementById("teacher").style = "background-image:url('images/ycshu.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/1-1.png'); z-index:5;";
 	} else if (teacher_no == 2) {
-		document.getElementById("teacher").style = "background-image:url('images/ccliu.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/1-2.png'); z-index:5;";
 	} else if (teacher_no == 3) {
-		document.getElementById("teacher").style = "background-image:url('images/andylee.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/1-3.png'); z-index:5;";
 	}
 	
 	var y = document.getElementsByName("option");
@@ -114,11 +131,11 @@ function showopt() {
 		if(y[i].checked) {
 			document.getElementById("author2").innerHTML = "<cite>" + x[1] + "</cite>";
 			if(i==1) {
-				document.getElementById("bgimage").style = "background-image:url('images/road-2.jpg');";
+				document.getElementById("bgimage").style = "background-image:url('images/51062057_40734949.2430223.jpg');";
 			} else if(i==2) {
-				document.getElementById("bgimage").style = "background-image:url('images/road-3.jpg');";
+				document.getElementById("bgimage").style = "background-image:url('images/457878.jpg');";
 			} else {
-				document.getElementById("bgimage").style = "background-image:url('images/road-dawn-mountains-sky.jpeg');";
+				document.getElementById("bgimage").style = "background-image:url('images/1120-1.jpg');";
 			}
 		}
 	}
